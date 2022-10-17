@@ -1,1 +1,142 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #2f2f37;
+
+  padding: 16px;
+}
+
+h1,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  max-height: 150%;
+}
+
+form {
+  input,
+  button {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #454545;
+
+    padding: 4px 16px;
+    border-radius: 20px;
+    border: 2px solid #757575;
+
+    outline: none;
+
+    &:focus-visible {
+      border: 2px solid #757575;
+      outline: none;
+    }
+  }
+
+  button {
+    background-color: aliceblue;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(177, 205, 230);
+    }
+  }
+}
+
+.search-form {
+  margin: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.images-container {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .photo-card {
+    flex: 1 0 21%;
+    padding: 20px;
+    border: 2px solid gray;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+
+    transition: background-color 0.5s ease;
+
+    &:hover {
+      background-color: aliceblue;
+    }
+
+    img {
+      max-width: 250px;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+    }
+
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+
+      & p {
+        flex: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        // margin: 10px;
+      }
+    }
+  }
+}
+
+.test-button {
+  z-index: 100;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  background-color: aliceblue;
+  color: #454545;
+  width: 150px;
+
+  padding: 4px 16px;
+  border-radius: 20px;
+  border: 2px solid #757575;
+
+  outline: none;
+
+  &:focus-visible {
+    border: 2px solid #757575;
+    outline: none;
+  }
+}
