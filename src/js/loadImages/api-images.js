@@ -9,22 +9,22 @@ export default class ImageApiService {
 
   async fetchesImages() {
     try {
-      const searchParams = new URLSearchParams({
-        key: '30549938-651b5d539a57bc16112485a48',
-        q: this.searchQuery,
-        image_type: 'photo',
-        page: this.page,
-        orientation: 'horizontal',
-        per_page: 12,
-        safesearch: true,
-        editors_choice: true,
+      const BASE_URL = `https://pixabay.com/api/?`;
+
+      const response = await axios.get(BASE_URL, {
+        params: {
+          key: '30549938-651b5d539a57bc16112485a48',
+          q: this.searchQuery,
+          image_type: 'photo',
+          page: this.page,
+          orientation: 'horizontal',
+          per_page: 12,
+          safesearch: true,
+          editors_choice: true,
+        },
       });
 
-      const BASE_URL = `https://pixabay.com/api/?${searchParams}`;
-
-      const response = await axios.get(BASE_URL);
-
-      let images = await response.data;
+      let images = response.data;
 
       if (this.page === 1 && images.total > 0) {
         this.totlaHitsFound(images.totalHits);

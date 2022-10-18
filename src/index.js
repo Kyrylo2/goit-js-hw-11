@@ -3,6 +3,7 @@ import ImageApiService from './js/loadImages/api-images';
 import renderImage from './js/loadImages/renderImages';
 import { gallery } from './js/simpleLightBox';
 import { scrollTo } from './js/smoothScroll';
+import { bgColor } from './js/loadImages/bgColor';
 
 const imageApiService = new ImageApiService();
 
@@ -32,6 +33,7 @@ async function loadMore() {
 
 function appendImagesMarkup(imagesArr) {
   refs.imagesContainer.insertAdjacentHTML('beforeend', renderImage(imagesArr));
+  bgColor();
   gallery.refresh();
 }
 

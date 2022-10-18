@@ -42,12 +42,12 @@ form {
 
     padding: 4px 16px;
     border-radius: 20px;
-    border: 2px solid #757575;
+    border: 1px solid #757575;
 
     outline: none;
 
     &:focus-visible {
-      border: 2px solid #757575;
+      border: 1px solid #757575;
       outline: none;
     }
   }
@@ -79,7 +79,7 @@ form {
   .photo-card {
     flex: 1 0 21%;
     padding: 20px;
-    border: 2px solid gray;
+    border: 1px solid gray;
     border-radius: 20px;
 
     display: flex;
@@ -88,16 +88,17 @@ form {
     align-items: center;
     gap: 10px;
 
-    transition: background-color 0.5s ease;
+    transition: background-color 1s ease-in-out;
 
     &:hover {
-      background-color: aliceblue;
+      background-color: aliceblue !important;
     }
 
     img {
       max-width: 250px;
       aspect-ratio: 4 / 3;
       object-fit: contain;
+      border-radius: 10px;
     }
 
     .info {
@@ -131,12 +132,12 @@ form {
 
   padding: 4px 16px;
   border-radius: 20px;
-  border: 2px solid #757575;
+  border: 1px solid #757575;
 
   outline: none;
 
   &:focus-visible {
-    border: 2px solid #757575;
+    border: 1px solid #757575;
     outline: none;
   }
 }
